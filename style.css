@@ -1,0 +1,193 @@
+:root {
+  --primary-color: #1e3a8a;
+  --secondary-color: #2563eb;
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --border-color: #cbd5e1;
+  --success-color: #16a34a;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+   padding-bottom: 60px; /* reserve space so the fixed footer doesn't cover the last table rows */
+  padding: 20px 15px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 12px;
+  margin-bottom: 15px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.counter-badge {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #dbeafe;
+}
+
+.counter-badge.filtered {
+  background-color: #f0fdf4;
+  color: var(--success-color);
+  border-color: #bbf7d0;
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.search-box:focus {
+  border-color: var(--secondary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.table-container {
+  overflow-x: auto;
+  overflow-y: visible;
+  max-height: none;
+  padding: 0;
+}
+
+/* Compact separate card rows */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  text-align: left;
+}
+
+th {
+  background-color: #f1f5f9;
+  color: #334155;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 8px 14px;
+  border-bottom: 2px solid #64748b;
+  position: static;
+}
+
+/* Base style for every compact row card */
+tr.card-row {
+  background-color: var(--row-bg-color, #ffffff);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+/* Catchy highlight effect ONLY when actively hovering with the mouse pointer */
+tr.card-row:hover {
+  background-color: #fef08a !important; /* Catchy warm yellow/gold highlight */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(202, 138, 4, 0.25); /* Glowing amber shadow */
+}
+
+td {
+  padding: 8px 14px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: var(--text-color);
+  border-top: 2px solid var(--row-border-color, #cbd5e1);
+  border-bottom: 2px solid var(--row-border-color, #cbd5e1);
+}
+
+/* Round the left side of the first cell and right side of the last cell */
+td:first-child {
+  border-left: 2px solid var(--row-border-color, #cbd5e1);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+td:last-child {
+  border-right: 2px solid var(--row-border-color, #cbd5e1);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.btn-download:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  border-color: var(--secondary-color);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.loading {
+  text-align: center;
+  padding: 30px;
+  font-weight: 500;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.highlight {
+  background-color: #fef08a;
+  color: #713f12;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+footer {
+        position:fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:aqua;
+        color:red;
+        text-align: center;
+        padding:4px; 
+        font-weight:800;
+    
+        }
